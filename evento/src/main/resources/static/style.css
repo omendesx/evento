@@ -1,0 +1,153 @@
+* {
+ box-sizing: border-box;
+}
+body {
+ margin: 0;
+ font-family: Arial, Helvetica, sans-serif;
+ background: #f4f6f9;
+ color: #222;
+}
+.container {
+ max-width: 1100px;
+ margin: 30px auto;
+ padding: 0 16px 40px;
+}
+.topo {
+ text-align: center;
+ margin-bottom: 24px;
+}
+.topo h1 {
+ margin-bottom: 8px;
+}
+.topo p {
+ margin: 0;
+ color: #666;
+}
+.card {
+ background: #fff;
+ border-radius: 12px;
+ padding: 20px;
+ margin-bottom: 20px;
+ box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+h2 {
+ margin-top: 0;
+}
+.campo {
+ display: flex;
+ flex-direction: column;
+ margin-bottom: 14px;
+}
+.campo label {
+ font-weight: bold;
+ margin-bottom: 6px;
+}
+.campo input,
+.campo textarea {
+ padding: 10px 12px;
+ border: 1px solid #cfd6dd;
+ border-radius: 8px;
+ font-size: 15px;
+ outline: none;
+}
+.campo input:focus,
+.campo textarea:focus {
+ border-color: #1976d2;
+}
+.acoes-form,
+.busca-box,
+.lista-topo,
+.acoes-card {
+ display: flex;
+ gap: 10px;
+ flex-wrap: wrap;
+ align-items: center;
+}
+button {
+ border: none;
+ border-radius: 8px;
+ padding: 10px 16px;
+ font-size: 14px;
+ cursor: pointer;
+ background: #1976d2;
+ color: white;
+ transition: 0.2s;
+}
+button:hover {
+ opacity: 0.92;
+}
+.btn-secundario {
+ background: #6c757d;
+}
+.btn-editar {
+ background: #f0ad4e;
+ color: #111;
+}
+.btn-excluir {
+ background: #d9534f;
+}
+.mensagem {
+ padding: 12px 14px;
+ border-radius: 8px;
+ margin-bottom: 16px;
+ font-weight: bold;
+}
+.mensagem.sucesso {
+ background: #e8f5e9;
+ color: #1b5e20;
+ border: 1px solid #a5d6a7;
+}
+.mensagem.erro {
+ background: #ffebee;
+ color: #b71c1c;
+ border: 1px solid #ef9a9a;
+}
+.hidden {
+ display: none;
+}
+.erro-campo {
+ color: #d32f2f;
+ margin-top: 4px;
+ min-height: 16px;
+ font-size: 13px;
+}
+.lista-eventos {
+ display: grid;
+ gap: 16px;
+}
+.evento-card {
+ border: 1px solid #dce3ea;
+ border-radius: 10px;
+ padding: 16px;
+ background: #fafafa;
+}
+.evento-card h3 {
+ margin-top: 0;
+ margin-bottom: 10px;
+}
+.evento-card p {
+ margin: 6px 0;
+}
+.sem-eventos {
+ text-align: center;
+ color: #666;
+ padding: 20px 0;
+}
+@media (max-width: 768px) {
+ .container {
+ margin-top: 16px;
+ }
+ .card {
+ padding: 16px;
+ }
+ button {
+ width: 100%;
+ }
+ .acoes-form,
+ .busca-box,
+ .lista-topo,
+ .acoes-card {
+ flex-direction: column;
+ align-items: stretch;
+ }
+}
