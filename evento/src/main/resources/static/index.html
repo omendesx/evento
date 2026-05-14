@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+    <header class="topo">
+    <h1>Cadastro de Eventos</h1>
+    <p>Front-end integrado com API Spring Boot</p>
+    </header>
+    <section class="card">
+        <h2 id="form-titiulo">Cadastrar evento</h2>
+        <div id="mensagem" class="mensagem hidden"></div>
+        <input type="hidden" id="evento-id">
+        
+        <div class="campo">
+          <label for="nome">Nome do evento</label>
+          <input type="text" id="nome" maxlength="100" placeholder="Digite o nome do evento">
+          <small class="erro-campo" id="erro-nome"></small>
+        </div>
+
+        <div class="campo">
+          <label for="nome">Local</label>
+          <input type="text" id="local" maxlength="100" placeholder="Digite o nome do evento">
+          <small class="erro-campo" id="erro-local"></small>
+        </div>
+    
+        <div class="campo">
+          <label for="nome">Data</label>
+          <input type="date" id="local" maxlength="100" placeholder="Digite o nome do evento">
+          <small class="erro-campo" id="erro-data"></small>
+        </div>
+ 
+        <div class="campo">
+        <label for="descricao">Descricao</label>
+        <textarea name="" id="descricao" maxlength="255" rows="4" placeholder="Digite a descrição do evento"></textarea>
+        <small class="erro-campo" id="erro-descricao"></small>
+        </div>
+           
+        <div class="acoes-form">
+            <buttom type="button" id="btn-salvar">Salvar</buttom>
+            <buttom type="button" id="btn-cancelar" class="btn-secundario hidden">Cancelar Edição</buttom>
+        </div>
+    </section>
+
+    <section class="card">
+         <h2>Buscar evento por ID</h2>
+         <div class="busca-box">
+            <input type="number" name="" id="busca-id" placeholder="Digite o id do evento" min="1">
+            <button type="button" id="btn-buscar">Buscar</button>
+            <button type="button" id="btn-listar-todos" class="btn-secundario">Listar todos</button>
+         </div>
+    </section>
+    <section class="card">
+       <div class="lista-topo">
+          <h2>Lista de Eventos</h2>
+          <button type="button" id="btn-recarregar" class="btn-secundario">Atualizar lista</button>
+       </div>
+       <div id="lista-eventos" class="lista-eventos"></div>
+    </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
